@@ -20,13 +20,7 @@ class ProjectRenderingView: AnimatingFramedView {
     }
     
     required init?(coder aDecoder: NSCoder) { fatalError() }
-    
-    private var project: Project?
-    
-    func update(project: Project) {
-        self.project = project
-    }
-    
+
     override func frameProvider() -> UIImage? {
         guard
             let project = self.projectSource(),

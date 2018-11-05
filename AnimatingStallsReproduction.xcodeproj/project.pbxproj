@@ -66,12 +66,12 @@
 			children = (
 				2997CF53218FFDCE00607A33 /* AppDelegate.swift */,
 				2997CF55218FFDCE00607A33 /* ViewController.swift */,
+				2997CF6B2190012000607A33 /* ProjectRenderingView.swift */,
 				2997CF57218FFDCE00607A33 /* Main.storyboard */,
 				2997CF5A218FFDCF00607A33 /* Assets.xcassets */,
 				2997CF5C218FFDCF00607A33 /* LaunchScreen.storyboard */,
 				2997CF5F218FFDCF00607A33 /* Info.plist */,
 				2997CF65218FFDE500607A33 /* AnimatingFramedView.swift */,
-				2997CF6B2190012000607A33 /* ProjectRenderingView.swift */,
 				2997CF67218FFE0800607A33 /* ProjectRenderer.swift */,
 				2997CF69219000FD00607A33 /* Utilities.swift */,
 				2997CF6D219001C100607A33 /* Model.swift */,

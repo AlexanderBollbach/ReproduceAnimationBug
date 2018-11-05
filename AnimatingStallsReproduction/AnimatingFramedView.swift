@@ -43,7 +43,6 @@ class AnimatingFramedView: UIView {
             userInfo: nil,
             repeats: true
         )
-        timer?.tolerance = 0.001
     }
     
     func newFrame() {
