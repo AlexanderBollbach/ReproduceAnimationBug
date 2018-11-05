@@ -43,6 +43,15 @@ class AnimatingFramedView: UIView {
             userInfo: nil,
             repeats: true
         )
+        
+//        let link = CADisplayLink(target: self, selector: #selector(linkAction))
+        
+//        link.add(to: RunLoop.main, forMode: .common)
+    }
+    
+    @objc func linkAction() {
+        
+        newFrame()
     }
     
     func newFrame() {
@@ -51,15 +60,30 @@ class AnimatingFramedView: UIView {
         if isPaused { return }
         
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
-            
+        
             guard let image = self?.frameProvider() else { return }
-            
+        
             DispatchQueue.main.async {
                 print("update \(Date())")
                 self?.imageView.image = image
             }
         }
+//
+//        setNeedsDisplay()
     }
+//
+//    override func draw(_ rect: CGRect) {
+//
+//        let ctx = UIGraphicsGetCurrentContext()
+//
+//        ctx?.clear(rect)
+//
+//        print(Date())
+//
+//        guard let im = frameProvider() else { return }
+//
+//        im.draw(in: rect)
+//    }
     
     private func nextTick() {
         tick = tick + 1 >= 100 ? 0 : tick + 1

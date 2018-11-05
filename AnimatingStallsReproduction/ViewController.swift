@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     var project = Project()
     
-    private let projectRW = ProjectRenderingView(framerate: 10)
+    private let projectRW = ProjectRenderingView(framerate: 30)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +32,13 @@ class ViewController: UIViewController {
         projectRW.projectSource = { [unowned self] in
             return self.project
         }
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        projectRW.setNeedsDisplay()
+        projectRW.imageView.setNeedsDisplay()
+        view.setNeedsDisplay()
     }
 }
 
